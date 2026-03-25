@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
+  <meta name="description" content="提供2026年第一季營運報告簡報、講義版PDF及相關圖片素材等內部專案檔案下載。">
+ <title>Joanhui簡報檔案分享中心</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 圖示庫 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+         *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; max-width: 100%; }
     body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
     img { max-width: 100%; height: auto; display: block; }
@@ -14,24 +20,149 @@
     .col-12 { grid-column: span 12; }
     @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
     .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-  </style>
+        /* 自訂字體與平滑滾動 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
 </head>
-<body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
+<body class="bg-gray-100 min-h-screen flex flex-col">
+     
+    <!-- 頁首 Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg"  role="banner">
+     <nav aria-label="主選單" >
       <a href="#about">關於我</a>
       <a href="#projects">作品集</a>
       <a href="https://example.com/blog">技術部落格</a>
       <a href="mailto:me@example.com">聯絡我</a>
     </nav>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
-  </header>
+        <div class="max-w-5xl mx-auto px-6 py-8 md:py-12 flex flex-col items-center">
+            <div class="bg-white/20 p-3 rounded-full mb-4">
+                <i class="fas fa-cloud-download-alt text-4xl"></i>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-center tracking-tight">Joanhui簡報檔案分享區</h1>
+            <p class="mt-3 text-blue-100 text-center max-w-2xl text-sm md:text-base">
+                請在下方列表中找到您需要的檔案並點擊下載。所有檔案皆已更新至最新版本。
+            </p>
+        </div>
+       
+    </header>
+ 
+    <!-- 主要內容區 Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-8 w-full">
+        
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <!-- 列表標頭 -->
+            <div class="bg-gray-50 border-b border-gray-200 px-6 py-4 flex justify-between items-center hidden sm:flex">
+                <span class="text-sm font-semibold text-gray-600 uppercase tracking-wider">檔案名稱</span>
+                <span class="text-sm font-semibold text-gray-600 uppercase tracking-wider">操作</span>
+            </div>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
-  </footer>
+            <!-- 檔案列表 -->
+            <ul class="divide-y divide-gray-100">
+                
+                <!-- 檔案項目 1 (PPTX) -->
+                <li class="p-6 hover:bg-blue-50 transition-colors duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-start sm:items-center gap-4">
+                        <div class="flex-shrink-0 mt-1 sm:mt-0">
+                            <i class="fas fa-file-powerpoint text-orange-500 text-4xl sm:text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-800">2026_第一季營運報告簡報.pptx</h2>
+                            <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
+                                <span class="bg-gray-100 px-2 py-0.5 rounded text-xs font-medium text-gray-600">大小: 15.2 MB</span>
+                                <span>•</span>
+                                <span>更新於: 2026/03/25</span>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">包含本季度完整的營運數據與下季度目標規劃。</p>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-auto mt-2 sm:mt-0">
+                        <!-- 替換 href 的 "#" 為實際檔案路徑，例如 "files/report.pptx" -->
+                        <a href="#" download="2026_第一季營運報告簡報.pptx" class="w-full sm:w-auto inline-flex justify-center items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
+                            <i class="fas fa-download mr-2"></i>
+                            下載檔案
+                        </a>
+                    </div>
+                </li>
+
+                <!-- 檔案項目 2 (PDF) -->
+                <li class="p-6 hover:bg-blue-50 transition-colors duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-start sm:items-center gap-4">
+                        <div class="flex-shrink-0 mt-1 sm:mt-0">
+                            <i class="fas fa-file-pdf text-red-500 text-4xl sm:text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-800">2026_第一季營運報告_講義版.pdf</h2>
+                            <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
+                                <span class="bg-gray-100 px-2 py-0.5 rounded text-xs font-medium text-gray-600">大小: 4.8 MB</span>
+                                <span>•</span>
+                                <span>更新於: 2026/03/25</span>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">簡報的 PDF 輸出版本，適合列印或在行動裝置上閱讀。</p>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-auto mt-2 sm:mt-0">
+                        <a href="#" download="2026_第一季營運報告_講義版.pdf" class="w-full sm:w-auto inline-flex justify-center items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
+                            <i class="fas fa-download mr-2"></i>
+                            下載檔案
+                        </a>
+                    </div>
+                </li>
+
+                <!-- 檔案項目 3 (ZIP) -->
+                <li class="p-6 hover:bg-blue-50 transition-colors duration-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-start sm:items-center gap-4">
+                        <div class="flex-shrink-0 mt-1 sm:mt-0">
+                            <i class="fas fa-file-archive text-yellow-500 text-4xl sm:text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-800">簡報使用之相關圖片與素材.zip</h2>
+                            <div class="mt-1 flex flex-wrap items-center gap-2 text-sm text-gray-500">
+                                <span class="bg-gray-100 px-2 py-0.5 rounded text-xs font-medium text-gray-600">大小: 32.5 MB</span>
+                                <span>•</span>
+                                <span>更新於: 2026/03/24</span>
+                            </div>
+                            <p class="mt-2 text-sm text-gray-600">打包了簡報內使用的高畫質圖片與圖表原始檔。</p>
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-auto mt-2 sm:mt-0">
+                        <a href="#" download="簡報使用之相關圖片與素材.zip" class="w-full sm:w-auto inline-flex justify-center items-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
+                            <i class="fas fa-download mr-2"></i>
+                            下載檔案
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- 說明區塊 -->
+        <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-info-circle text-blue-500"></i>
+                </div>
+                <div class="ml-3">
+                    <h3 class="text-sm font-medium text-blue-800">下載說明</h3>
+                    <div class="mt-2 text-sm text-blue-700">
+                        <p>如果您在下載過程中遇到任何問題，或需要索取密碼保護的檔案，請聯繫 IT 部門或簡報負責人。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 頁尾 Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+    
+    
+        <div class="max-w-5xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p>&copy; 2026 內部資料分享系統. 保留所有權利。<a href="#">GitHub</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
